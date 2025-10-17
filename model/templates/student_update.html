@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Students</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">name:</label>
+        <input type="text" name="username" value="{{stu_data.name}}">
+        <label for="">roll_no :</label>
+        <input type="text" name="userrollno" value="{{stu_data.roll_no}}">
+        <label for="">department:</label>
+        <input type="text" name="userdepartment" value="{{stu_data.department}}">
+        <label for="">email:</label>
+        <input type="text" name="useremail" value="{{stu_data.email}}">
+        <label for="">marks:</label>
+        <input type="text" name="usermarks" value="{{stu_data.marks}}">
+        <button type="submit">Add Students</button>
+
+    </form>
+</body>
+</html>
