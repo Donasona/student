@@ -40,3 +40,8 @@ class StudentdeleteView(View):
         stu_data.delete()
         return render(request,"student_details.html")
 
+class StudentretriveView(View):
+    def get(self,request,**kwargs):
+        retrive_id = kwargs.get("pk")
+        stu_data =Student.objects.get(id=retrive_id)
+        return render(request,"stu_details.html",{"stu_data":stu_data})   
