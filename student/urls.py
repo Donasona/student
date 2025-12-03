@@ -20,7 +20,7 @@ from model.views import CreatestudentView,UpdateStudent,StudentdeleteView,Studen
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('details/',CreatestudentView.as_view()),
+    path('create/',CreatestudentView.as_view()),
     path('update/',UpdateStudent.as_view()),
     path('delete/<int:pk>',StudentdeleteView.as_view()),
     path('retrive/<int:pk>',StudentretriveView.as_view()),
